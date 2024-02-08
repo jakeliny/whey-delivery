@@ -18,7 +18,7 @@ export const CartCounter = styled.div`
   width: 38px;
   height: 38px;
   border-radius: 6px;
-  background-color: ${(props) => props.theme["yellow-light"]};
+  background-color: ${(props) => props.theme.color["yellow-light"]};
 
   display: flex;
   align-items: center;
@@ -26,13 +26,13 @@ export const CartCounter = styled.div`
   position: relative;
 
   div {
-    font-size: 0.8rem;
-    background-color: ${(props) => props.theme["yellow-dark"]};
+    background-color: ${(props) => props.theme.color["yellow-dark"]};
     color: #fff;
     border-radius: 100%;
     width: 20px;
     height: 20px;
-    font-weight: 700;
+
+    ${(props) => props.theme.FontText.small};
 
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ export const CartCounter = styled.div`
   }
 
   svg {
-    color: ${(props) => props.theme["yellow-dark"]};
+    color: ${(props) => props.theme.color["yellow-dark"]};
     font-size: 1.4rem;
   }
 `;
@@ -52,9 +52,9 @@ export const CartCounter = styled.div`
 export const Location = styled.div`
   width: 133px;
   height: 38px;
-  background-color: ${(props) => props.theme["purple-light"]};
+  background-color: ${(props) => props.theme.color["purple-light"]};
   padding: 8px;
-  color: ${(props) => props.theme["purple-dark"]};
+  color: ${(props) => props.theme.color["purple-dark"]};
   border-radius: 6px;
 
   display: flex;
@@ -62,7 +62,6 @@ export const Location = styled.div`
   justify-content: space-around;
 
   p {
-    font-size: 0.8rem;
-    font-weight: 500;
+    ${(props) => props.theme.FontText.small};
   }
 `;
