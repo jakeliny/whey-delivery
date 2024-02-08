@@ -1,37 +1,25 @@
-import { CircleIcon } from "./components/CicleIcon";
-import { Hero } from "./styles";
+import { Hero } from "./components/Hero";
+import { ProductCard } from "./components/ProductCard";
+import { Products } from "./styles";
+import { productsData } from "../../data";
 
 export function Home() {
   return (
-    <Hero>
-      <div className="text">
-        <h2>The best supplements to achieve your goal</h2>
-        <p>
-          With Whey Delivery you receive your supplement wherever you are,
-          anytime
-        </p>
-        <div className="icons">
-          <div>
-            <CircleIcon
-              icon="shoppingCart"
-              text="Secure purchase"
-              color="yellow-dark"
+    <>
+      <Hero />
+      <Products>
+        <h2>Suplemments</h2>
+        <div className="ProductsList">
+          {productsData.map((product) => (
+            <ProductCard
+              image={product.image}
+              title={product.title}
+              description={product.description}
+              price={product.price}
             />
-            <CircleIcon icon="Timer" text="Fast Delivery" color="yellow" />
-          </div>
-          <div>
-            <CircleIcon icon="Package" text="Proper packaging" color="text" />
-            <CircleIcon
-              icon="Whey"
-              text="The best supplements"
-              color="purple"
-            />
-          </div>
+          ))}
         </div>
-      </div>
-      <div className="image">
-        <img src="/home_image.png" alt="Whey Delivery" />
-      </div>
-    </Hero>
+      </Products>
+    </>
   );
 }

@@ -9,12 +9,12 @@ export function Header() {
       </div>
       <div className="buttons">
         <Location>
-          <MapPin />
+          <MapPin weight="fill" />
           <p>São Paulo - SP</p>
         </Location>
         <CartCounter>
           <div>5</div>
-          <ShoppingCart />
+          <ShoppingCart weight="fill" />
         </CartCounter>
       </div>
     </HeaderContainer>

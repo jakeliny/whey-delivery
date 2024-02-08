@@ -1,34 +1,19 @@
 import styled from "styled-components";
 
-export const Hero = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+export const Products = styled.section`
+  margin-top: 100px;
 
-  .text {
-    padding: 0 20px;
-
-    > h2 {
-      ${(props) => props.theme.FontTitle.xLarge}
-      color: ${(props) => props.theme.color.title};
-      margin-bottom: 1rem;
-    }
-
-    > p {
-      ${(props) => props.theme.FontText.largeRegular}
-      color: ${(props) => props.theme.color.subtitle};
-    }
+  > h2 {
+    ${(props) => props.theme.FontTitle.large}
+    color: ${(props) => props.theme.color.subtitle};
+    margin-bottom: 54px;
   }
 
-  .icons {
+  .ProductsList {
     display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-
-    > div {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    row-gap: 5rem;
   }
 `;

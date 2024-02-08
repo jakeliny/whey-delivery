@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 6rem 0 2rem;
 
   > p {
     ${(props) => props.theme.FontText.xSmall}

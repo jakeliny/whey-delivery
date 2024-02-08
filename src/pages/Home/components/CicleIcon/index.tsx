@@ -11,15 +11,15 @@ interface CircleIconProps {
 function iconSwitch(icon: string) {
   switch (icon) {
     case "shoppingCart":
-      return <ShoppingCart />;
+      return <ShoppingCart weight="fill" />;
     case "Package":
-      return <Package />;
+      return <Package weight="fill" />;
     case "Timer":
-      return <Timer />;
+      return <Timer weight="fill" />;
     case "Whey":
       return <img src="/whey.svg" alt="whey delivery logo" />;
     default:
-      return <ShoppingCart />;
+      return <ShoppingCart weight="fill" />;
   }
 }
 
