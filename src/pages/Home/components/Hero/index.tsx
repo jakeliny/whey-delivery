@@ -1,4 +1,5 @@
-import { CircleIcon } from "../CicleIcon";
+import { Package, ShoppingCart, Timer } from "@phosphor-icons/react";
+import { CircleIcon } from "../../../../components/CicleIcon";
 import { HeroContainer } from "./styles";
 
 export function Hero() {
@@ -12,20 +13,20 @@ export function Hero() {
         </p>
         <div className="icons">
           <div>
-            <CircleIcon
-              icon="shoppingCart"
-              text="Secure purchase"
-              color="yellow-dark"
-            />
-            <CircleIcon icon="Timer" text="Fast Delivery" color="yellow" />
+            <CircleIcon text="Secure purchase" color="yellow-dark">
+              <ShoppingCart weight="fill" />
+            </CircleIcon>
+            <CircleIcon text="Fast Delivery" color="yellow">
+              <Timer weight="fill" />
+            </CircleIcon>
           </div>
           <div>
-            <CircleIcon icon="Package" text="Proper packaging" color="text" />
-            <CircleIcon
-              icon="Whey"
-              text="The best supplements"
-              color="purple"
-            />
+            <CircleIcon text="Proper packaging" color="text">
+              <Package weight="fill" />
+            </CircleIcon>
+            <CircleIcon text="The best supplements" color="purple">
+              <img src="/whey.svg" alt="whey delivery logo" />;
+            </CircleIcon>
           </div>
         </div>
       </div>
