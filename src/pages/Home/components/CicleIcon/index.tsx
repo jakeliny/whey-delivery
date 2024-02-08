@@ -1,9 +1,11 @@
 import { ShoppingCart, Timer, Package } from "@phosphor-icons/react";
-import { CircleIconContainer } from "./styles";
+import { CicleIconWithText, CircleIconContainer } from "./styles";
+import { DefaultTheme } from "styled-components";
 
 interface CircleIconProps {
-  color?: string;
+  color: keyof DefaultTheme["color"];
   icon: "shoppingCart" | "Package" | "Timer" | "Whey";
+  text: string;
 }
 
 function iconSwitch(icon: string) {
@@ -21,12 +23,13 @@ function iconSwitch(icon: string) {
   }
 }
 
-export function CircleIcon({ color, icon }: CircleIconProps) {
+export function CircleIcon({ color, icon, text }: CircleIconProps) {
   return (
-    <div className="circleIcon">
-      <CircleIconContainer color={color || "text"}>
+    <CicleIconWithText className="circleIcon">
+      <CircleIconContainer color={color}>
         {iconSwitch(icon)}
       </CircleIconContainer>
-    </div>
+      <p>{text}</p>
+    </CicleIconWithText>
   );
 }
