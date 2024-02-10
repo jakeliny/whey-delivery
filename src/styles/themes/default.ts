@@ -107,7 +107,7 @@ export const defaultTheme = {
     Medium: {
       "font-size": ".75rem",
       "line-height": "160%",
-      "font-weight": "700",
+      "font-weight": "400",
       "font-family": "'roboto', sans-serif",
     },
   },

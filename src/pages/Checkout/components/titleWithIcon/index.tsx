@@ -1,3 +1,5 @@
+import { TitleWithIconContainer } from "./styles";
+
 interface TitleWithIconProps {
   title: string;
   subTitle: string;
@@ -10,12 +12,12 @@ export const TitleWithIcon = ({
   children,
 }: TitleWithIconProps) => {
   return (
-    <div className="sectionTitle">
+    <TitleWithIconContainer>
       {children}
       <div>
         <h2>{title}</h2>
         <p>{subTitle}</p>
       </div>
-    </div>
+    </TitleWithIconContainer>
   );
 };
