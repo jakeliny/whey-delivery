@@ -15,7 +15,7 @@ import {
   PaymentMethods,
   ShippingInformation,
 } from "./styles";
-import { CartItem } from "./components/ProductCart";
+import { CartItems } from "./components/ProductCart";
 import { useState } from "react";
 import { PaymentButton } from "./components/PaymentButton";
 
@@ -31,20 +31,6 @@ type newFormInterface = zod.infer<typeof newFormValidationSchema>;
 
 export function Checkout() {
   const [paymentMethod, setPaymentMethod] = useState("");
-  const [cartItems, setCartItems] = useState([
-    {
-      image: "/products/creatine.png",
-      title: "Creatine",
-      price: "39,90",
-      quantity: 2,
-    },
-    {
-      image: "/products/pre-workout.png",
-      title: "Pre-Workout Haze",
-      price: "79,90",
-      quantity: 7,
-    },
-  ]);
 
   const { register, reset, formState, handleSubmit } = useForm({
     defaultValues: {
@@ -137,16 +123,8 @@ export function Checkout() {
         <div className="CartResumeContainer">
           <h2>Products Selected</h2>
           <div className="cartResume">
-            {cartItems.map((item, index) => (
-              <CartItem
-                key={index}
-                image={item.image}
-                title={item.title}
-                price={item.price}
-                quantity={item.quantity}
-                setCartItems={setCartItems}
-              />
-            ))}
+            <CartItems />
+
             <button type="submit">Confirm Order</button>
           </div>
         </div>

@@ -1,8 +1,11 @@
 import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 import { CartCounter, HeaderContainer, Location } from "./styles";
 import { NavLink } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
+import { useContext } from "react";
 
 export function Header() {
+  const { cartQuantity } = useContext(CartContext);
   return (
     <HeaderContainer>
       <div className="headerLogo">
@@ -15,10 +18,12 @@ export function Header() {
           <MapPin weight="fill" />
           <p>São Paulo - SP</p>
         </Location>
-        <CartCounter>
-          <div>5</div>
-          <ShoppingCart weight="fill" />
-        </CartCounter>
+        <NavLink to={"/checkout"}>
+          <CartCounter>
+            <div>{cartQuantity}</div>
+            <ShoppingCart weight="fill" />
+          </CartCounter>
+        </NavLink>
       </div>
     </HeaderContainer>
   );

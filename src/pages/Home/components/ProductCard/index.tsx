@@ -1,19 +1,35 @@
 import { Minus, Plus, ShoppingCart } from "@phosphor-icons/react";
 import { ProductCardContainer } from "./styles";
+import { useContext, useState } from "react";
+import { CartContext } from "../../../../contexts/CartContext";
 
 interface ProductCardProps {
+  id: number;
   image: string;
   title: string;
   description: string;
-  price: string;
+  price: number;
 }
 
 export function ProductCard({
+  id,
   image,
   title,
   description,
   price,
 }: ProductCardProps) {
+  const { addToCart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);
+
+  const addQuantity = () => {
+    setQuantity((state) => state + 1);
+  };
+
+  const removeQuantity = () => {
+    if (quantity === 1) return;
+    setQuantity((state) => state - 1);
+  };
+
   return (
     <ProductCardContainer>
       <div className="image">
@@ -28,15 +44,21 @@ export function ProductCard({
             {price}
           </p>
           <div className="quantity">
-            <button>
+            <button onClick={() => removeQuantity()}>
               <Minus weight="bold" />
             </button>
-            <span>1</span>
-            <button>
+            <span>{quantity}</span>
+            <button onClick={() => addQuantity()}>
               <Plus weight="bold" />
             </button>
           </div>
-          <div className="action">
+          <div
+            className="action"
+            onClick={() => {
+              setQuantity(1);
+              addToCart({ id, image, title, price, quantity });
+            }}
+          >
             <ShoppingCart weight="fill" />
           </div>
         </div>

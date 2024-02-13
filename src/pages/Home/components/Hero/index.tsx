@@ -25,7 +25,7 @@ export function Hero() {
               <Package weight="fill" />
             </CircleIcon>
             <CircleIcon text="The best supplements" color="purple">
-              <img src="/whey.svg" alt="whey delivery logo" />;
+              <img src="/whey.svg" alt="whey delivery logo" />
             </CircleIcon>
           </div>
         </div>
