@@ -22,7 +22,6 @@ The project was created on react
 - [x] React Hooks
 - [x] React Hook Forms
 - [x] Context API
-- [x] Reducers <!-- ? -->
 - [x] Styled Components
 
 ## For Run
