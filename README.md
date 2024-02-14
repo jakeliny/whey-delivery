@@ -1,10 +1,12 @@
 # Whey Delivery
+Simple ecommerce to buy your power supplement
 
 ## Layout
-
 To see the complete layout: [figma](https://www.figma.com/file/dnSn4QPDo24tdk1weJuHD8/Whey-Delivery?type=design&node-id=222%3A564&mode=design&t=bpYTcyzo45UR6Y4K-1)
 
 <!-- image -->
+![image](https://github.com/jakeliny/whey-delivery/assets/17316392/55795c30-8b66-4d9c-9fa3-5a8a5a498ee5)
+
 
 ## Features
 
